@@ -182,6 +182,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\TextRpg\FightUnit.cpp" />
+    <ClCompile Include="..\TextRpg\FightZone.cpp" />
+    <ClCompile Include="..\TextRpg\Monster.cpp" />
+    <ClCompile Include="..\TextRpg\NameUnit.cpp" />
+    <ClCompile Include="..\TextRpg\Player.cpp" />
+    <ClCompile Include="..\TextRpg\StatusUnit.cpp" />
+    <ClCompile Include="..\TextRpg\TextRpg.cpp" />
+    <ClCompile Include="..\TextRpg\Town.cpp" />
+    <ClCompile Include="..\TextRpg\Weapon.cpp" />
+    <ClCompile Include="..\TextRpg\ZoneBase.cpp" />
     <ClCompile Include="FightUnit.cpp" />
     <ClCompile Include="FightZone.cpp" />
     <ClCompile Include="Monster.cpp" />
@@ -194,6 +204,15 @@
     <ClCompile Include="ZoneBase.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\TextRpg\FightUnit.h" />
+    <ClInclude Include="..\TextRpg\FightZone.h" />
+    <ClInclude Include="..\TextRpg\Monster.h" />
+    <ClInclude Include="..\TextRpg\NameUnit.h" />
+    <ClInclude Include="..\TextRpg\Player.h" />
+    <ClInclude Include="..\TextRpg\StatusUnit.h" />
+    <ClInclude Include="..\TextRpg\Town.h" />
+    <ClInclude Include="..\TextRpg\Weapon.h" />
+    <ClInclude Include="..\TextRpg\ZoneBase.h" />
     <ClInclude Include="FightUnit.h" />
     <ClInclude Include="FightZone.h" />
     <ClInclude Include="Monster.h" />
@@ -203,6 +222,10 @@
     <ClInclude Include="Town.h" />
     <ClInclude Include="Weapon.h" />
     <ClInclude Include="ZoneBase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\TextRpg\TextRpg.vcxproj" />
+    <None Include="..\TextRpg\TextRpg.vcxproj.filters" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
