@@ -6,7 +6,7 @@ class Monster : public ConsoleObject
 protected:
 	void Update() override;
 
-	int DownValue = 10;
-	bool Right = false;
+	int count = 10;
+	int2 Dir = Right;
 };
 

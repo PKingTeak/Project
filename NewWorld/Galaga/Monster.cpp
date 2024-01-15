@@ -4,7 +4,7 @@
 
 void Monster::Update()
 {
-	
+
 
 	ConsoleObject* CollisionObject = Collision(GalagaUpdateType::Bullet);
 
@@ -13,55 +13,58 @@ void Monster::Update()
 		Destroy();
 		CollisionObject->Destroy();
 	}
-
-	//AddPos(Right);
-	int2 monsterPos = GetPos();
+	int2 MonsterPos = GetPos();
 	EngineCore* Core = GetCore();
+	int changeX = Core->Screen.GetScreenX();
+	int changeY = Core->Screen.GetScreenY();
 
-	
 
-	if(monsterPos.X >= 0 && monsterPos.X<=20)
+	AddPos(Dir);
+
+
+	if (MonsterPos.X >= changeX && Dir == Right)
 	{
-		AddPos(Dir);
-		--DownValue;
-		if (DownValue < 0)
-		{
+		Dir = Left;
 		AddPos(Down);
-		DownValue = 10;
-		int a = 0;
-		}
-		if (monsterPos.X == 20)
-		{
-			AddPos(Left);
-		}
-
-		 
 	}
-	//else if(monsterPos.X <)
+	else if (MonsterPos.X <= 0 && Dir == Left)
+	{
+		Dir = Right;
+		AddPos(Down);
 
-	
-	
-	
-	//--RightValue;
-	//--LeftValue;
-	
-	//if (0 >= RightValue)
+	}
+	count = 10;
+
+	if (MonsterPos.Y >= changeY)
+	{
+		//게임종료
+	}
+
+
+
+	//--count;
+	//if (count <= 0)
 	//{
-	//	AddPos(Right);
-	//	RightValue = 5;
+	//	AddPos(Down);
+	//	if (Dir == Right)
+	//	{
+	//		Dir = Left;
+	//	}
+	//	else if (Dir == Left)
+	//	{
+	//		Dir = Right;
+	//
+	//	}
+	//	count = 10;
 	//}
-//	if (0 >= DownValue)
-//	{
-//		AddPos(Down);
-//		DownValue = 10;
-//		RightValue = 10;
-//		LeftValue = 1;
-//	}
-//	if (0 >= LeftValue)
-//	{
-//		AddPos(Left);
-//
-//	}
+		//if (MonsterPos.Y >= changer)
+		//{
+		//	
+		//}
 
-	
+		/*
+		AddPos(Dir);
+		--count;
+
+		*/
 }
