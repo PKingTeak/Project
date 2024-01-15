@@ -5,20 +5,8 @@ class Bullet : public ConsoleObject
 {
 public:
 	Bullet();
-	void Move();
-	void Move2();
 
-	void Fire()
-	{
-		IsFire = true;
-	}
-
-	bool GetIsFire() 
-	{
-		return IsFire;
-	}
-
-private:
-	bool IsFire = false;
+protected:
+	void Update() override;
 };
 
