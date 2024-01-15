@@ -32,7 +32,7 @@ public:
 
 	virtual void Update()
 	{
-
+		//근데 가상함수다?
 	}
 
 	void Destroy()
